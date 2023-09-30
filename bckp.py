@@ -26,15 +26,15 @@ command = "copy startup-config tftp://192.168.1.1/"
 # loop through device list and execute commands
 for ip in iplist:
     for line in iplist:
-    parts = line.split()
-    if len(parts) >= 2:
-        ipaddr = parts[0].strip()
-        host = parts[1].strip()
-    ssh.connect(hostname=ipaddr, username=user, password=secret, port=port)
-    stdin, stdout, stderr = ssh.exec_command(command)
-    list = stdout.readlines()
-    outfile = open(outfilepath + host + "_" + time_now, "w")
-    for char in list:
-        outfile.write(char)
-    ssh.close()
-    outfile.close()
+        parts = line.split()
+        if len(parts) >= 2:
+            ipaddr = parts[0].strip()
+            host = parts[1].strip()
+        ssh.connect(hostname=ipaddr, username=user, password=secret, port=port)
+        stdin, stdout, stderr = ssh.exec_command(command)
+        list = stdout.readlines()
+        outfile = open(outfilepath + host + "_" + time_now, "w")
+        for char in list:
+            outfile.write(char)
+            ssh.close()
+            outfile.close()
