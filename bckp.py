@@ -21,7 +21,7 @@ input_file = open( infilepath + devicelist, "r")
 iplist = input_file.readlines()
 input_file.close()
 
-command = "copy startup-config tftp://192.168.1.1/"
+# command = "copy startup-config tftp://192.168.1.1/"   ----------->> hanya dipakai jika ingin backup ke tftp
 c2 = "sh run"
 
 # loop through device list and execute commands
