@@ -1,0 +1,3 @@
+192.168.1.90 switch-lantai-9
+192.168.1.70 switch-lantai-7
+192.168.1.80 switch-lantai-8
