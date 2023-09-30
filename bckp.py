@@ -12,8 +12,8 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
  
 # define variables
 time_now  = datetime.datetime.now().strftime('%m_%d_%Y_%H_%M_%S')
-infilepath = "/root/tftp"
-outfilepath = "/root/tftp"
+infilepath = "/root/tftp/"
+outfilepath = "/root/tftp/"
 devicelist = "ip.txt"
  
 # open device file
