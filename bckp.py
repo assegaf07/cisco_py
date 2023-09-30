@@ -21,7 +21,7 @@ input_file = open( infilepath + devicelist, "r")
 iplist = input_file.readlines()
 input_file.close()
 
-command = "copy startup-config tftp://192.168.200.102/" + str(ipaddr)+ "-" + time_now
+command = "terminal dont-ask ; copy startup-config tftp://192.168.200.102/" + str(ipaddr)+ "-" + time_now
 
 # loop through device list and execute commands
 for ip in iplist:
